@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | IndiaTour</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Icons & Bootstrap -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+
+<style>
+:root{
+    --primary-color: #00bcd4;
+    --accent-color: #f50057;
+    --text-color: #ffffff;
+    --font-main: 'Roboto', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-main);
+    background: url('14.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+}
+
+/* Overlay */
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75));
+    z-index: -1;
+}
+
+/* Navbar */
+.nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 14px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    z-index: 1000;
+}
+
+.logo{
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+}
+
+.nav-links a{
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-links a::after{
+    content:"";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--accent-color);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+}
+
+/* Page Content */
+.container{
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+/* Titles */
+.page-title{
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.subtitle{
+    text-align: center;
+    opacity: 0.85;
+    margin-bottom: 50px;
+}
+
+/* Glass Cards */
+.card-box{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+    margin-bottom: 30px;
+}
+
+/* Card Headings */
+.card-box h2{
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+/* Text */
+.card-box p{
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Contact Icons */
+.contact-icons{
+    text-align: center;
+}
+
+.contact-icons i{
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.contact-icons p{
+    font-size: 1.1rem;
+}
+
+/* Social */
+.social{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.social h4{
+    margin-bottom: 15px;
+}
+
+.social a{
+    display: inline-block;
+    margin: 8px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: #fff;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social a:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.footer-text{
+    margin-top: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .page-title{
+        font-size: 2.3rem;
+    }
+
+    .nav{
+        padding: 14px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="nav">
+    <div class="logo">IndiaTour</div>
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="2.html">LOGIN</a>
+        <a href="6.html">SIGN UP</a>
+        <a href="3.html">ABOUT US</a>
+        <a href="4.html">DELHI</a>
+        <a href="5.html">GUJARAT</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <h1 class="page-title">About Us</h1>
+    <p class="subtitle">Discover the soul of India with IndiaTour</p>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="card-box">
+                <h2>Registered Office</h2>
+                <p>
+                    Tourism India Private Limited<br>
+                    State Emperia Buildings<br>
+                    Baba Kharak Singh Road<br>
+                    Connaught Place<br>
+                    New Delhi, India<br><br>
+                    <strong>Telephone:</strong> 1800 415 5964
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card-box">
+                <h2>Managing Directors</h2>
+                <p>Anirudh Kumar</p>
+                <p>Abhayjeet Singh</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card-box contact-icons">
+        <p><i class="fa fa-phone"></i> +91 4664 5446 4534</p>
+        <p><i class="fa fa-envelope"></i> tourismindia@gmail.com</p>
+        <p><i class="fa fa-globe"></i> www.tourismindia.com</p>
+    </div>
+
+    <div class="social">
+        <h4>FOLLOW US</h4>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-google"></i></a>
+        <div class="footer-text">INDIA</div>
+    </div>
+
+</div>
+
+</body>
+</html>

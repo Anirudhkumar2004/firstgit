@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | IndiaTour</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary-color: #00bcd4;
+    --accent-color: #f50057;
+    --text-color: #ffffff;
+    --font-main: 'Roboto', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: var(--font-main);
+    background: url('login-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+/* Dark Overlay */
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75));
+    z-index: -1;
+}
+
+/* Login Card */
+.container{
+    width: 360px;
+    padding: 40px 30px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+/* Heading */
+.container h1{
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.subtitle{
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-bottom: 30px;
+}
+
+/* Input Fields */
+.box{
+    margin-bottom: 18px;
+}
+
+.box input{
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: rgba(255,255,255,0.9);
+}
+
+.box input:focus{
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+/* Button */
+.btn{
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* Extra Links */
+.links{
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.links a{
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.links a:hover{
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media(max-width: 420px){
+    .container{
+        width: 90%;
+    }
+}
+</style>
+<link rel="stylesheet" href="2.css">
+</head>
+
+<body>
+    <nav class="nav">
+    <div class="logo">IndiaTour</div>
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="2.html">LOG IN</a>
+        <a href="6.html">SIGN UP</a>
+        <a href="3.html">ABOUT US</a>
+        <a href="4.html">DELHI</a>
+        <a href="5.html">GUJARAT</a>
+    </div>
+</nav>
+
+<form method="post" action="22.php">
+    <div class="container">
+        <h1>Welcome Back</h1>
+        <p class="subtitle">Login to explore incredible India</p>
+
+        <div class="box">
+            <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="box">
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+
+        <button class="btn">Sign In</button>
+
+        <div class="links">
+            <p>New here? <a href="6.html">Create an account</a></p>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

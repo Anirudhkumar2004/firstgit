@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tourism in India</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+:root {
+    --primary-color: #00bcd4;
+    --accent-color: #f50057;
+    --text-color: #263238;
+    --main-font: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--main-font);
+    background: url(9.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+}
+
+/* Overlay */
+body::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+    z-index: -1;
+}
+
+/* Navbar */
+.nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 14px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    z-index: 1000;
+}
+
+.logo{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+}
+
+.nav-links a{
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-links a::after{
+    content:"";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--accent-color);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+}
+
+/* Hero */
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    margin-bottom: 10px;
+}
+
+.subtitle{
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* Search Box */
+.SearchBox {
+    --height: 4em;
+    display: flex;
+    border-radius: var(--height);
+    background-color: var(--primary-color);
+    height: var(--height);
+}
+
+.SearchBox-input {
+    width: 0;
+    padding-left: 1em;
+    font-size: 1.2em;
+    color: #fff;
+    transition: .45s;
+}
+
+.SearchBox-input::placeholder{
+    color: rgba(255,255,255,0.8);
+}
+
+.SearchBox:hover .SearchBox-input {
+    width: 320px;
+}
+
+.SearchBox-button {
+    width: var(--height);
+    height: var(--height);
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Sections */
+section{
+    padding: 80px 10%;
+    text-align: center;
+}
+
+section h2{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Cards */
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.card h3{
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+/* CTA */
+.cta{
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    padding: 80px 10%;
+}
+
+.cta h2{
+    margin-bottom: 20px;
+}
+
+.cta button{
+    padding: 14px 40px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: white;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="nav">
+    <div class="logo">IndiaTour</div>
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="2.html">LOG IN</a>
+        <a href="6.html">SIGN UP</a>
+        <a href="3.html">ABOUT US</a>
+        <a href="4.html">DELHI</a>
+        <a href="5.html">GUJARAT</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<main>
+    <h1>Tourism in India</h1>
+    <p class="subtitle">Discover Culture • Heritage • Beauty</p>
+
+    <!-- <div class="SearchBox">
+        <input class="SearchBox-input" placeholder="Search destinations...">
+         <div class="SearchBox-button">
+            <span class="material-icons">search</span>
+        </div> 
+    </div> -->
+</main>
+
+<!-- Destinations -->
+<section>
+    <h2>Popular Destinations</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Delhi</h3>
+            <p>Historic monuments, vibrant markets and rich culture.</p>
+        </div>
+        <div class="card">
+            <h3>Gujarat</h3>
+            <p>White deserts, heritage temples and wildlife sanctuaries.</p>
+        </div>
+        <div class="card">
+            <h3>Kerala</h3>
+            <p>Backwaters, hill stations and peaceful beaches.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Why India -->
+<section>
+    <h2>Why Visit India?</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Diverse Culture</h3>
+            <p>Languages, traditions and festivals like nowhere else.</p>
+        </div>
+        <div class="card">
+            <h3>Natural Beauty</h3>
+            <p>Mountains, deserts, beaches and forests.</p>
+        </div>
+        <div class="card">
+            <h3>Rich History</h3>
+            <p>Ancient temples, forts and world heritage sites.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Start Your Journey Today</h2>
+    <p>Explore India like never before</p><br>
+    <button>Explore Now</button>
+</section>
+
+</body>
+</html>

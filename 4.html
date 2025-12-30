@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore Delhi | IndiaTour</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary-color: #00bcd4;
+    --accent-color: #f50057;
+    --text-color: #ffffff;
+    --font-main: 'Roboto', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-main);
+    background: url('22.jfif') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+}
+
+/* Overlay */
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75));
+    z-index: -1;
+}
+
+/* Navbar */
+.nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 14px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    z-index: 1000;
+}
+
+.logo{
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+}
+
+.nav-links a{
+    margin-left: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-links a::after{
+    content:"";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--accent-color);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+}
+
+/* Page Container */
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+/* Page Title */
+.main-title{
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+/* Place Card */
+.place{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 45px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+}
+
+/* Place Title */
+.place h2{
+    font-family: var(--font-heading);
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+/* Description */
+.place p{
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    opacity: 0.95;
+}
+
+/* Gallery */
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.gallery img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .main-title{
+        font-size: 2.3rem;
+    }
+
+    .place h2{
+        font-size: 1.6rem;
+    }
+
+    .nav{
+        padding: 14px 20px;
+    }
+}
+</style>
+<link rel="stylesheet" href="2.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="nav">
+    <div class="logo">IndiaTour</div>
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="2.html">LOGIN</a>
+        <a href="6.html">SIGN UP</a>
+        <a href="3.html">ABOUT US</a>
+        <a href="4.html">DELHI</a>
+        <a href="5.html">GUJARAT</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <h1 class="main-title">Delhi</h1>
+
+    <!-- India Gate -->
+    <div class="place">
+        <h2>1. India Gate</h2>
+        <p>
+            The India Gate was commissioned by the Imperial War Graves Commission in 1918.
+            It commemorates Indian soldiers who sacrificed their lives during World War I
+            and stands today as a powerful national monument of courage and remembrance.
+        </p>
+        <div class="gallery">
+            <img src="31.jfif">
+            <img src="32.jfif">
+            <img src="33.jfif">
+            <img src="34.jfif">
+        </div>
+    </div>
+
+    <!-- Akshardham -->
+    <div class="place">
+        <h2>2. Akshardham Temple</h2>
+        <p>
+            Swaminarayan Akshardham showcases millennia of Indian culture and spirituality.
+            Opened in 2005 along the Yamuna river, it is one of the world’s largest Hindu
+            temple complexes.
+        </p>
+        <div class="gallery">
+            <img src="35.jfif">
+            <img src="36.jfif">
+            <img src="37.jfif">
+            <img src="38.jfif">
+        </div>
+    </div>
+
+    <!-- Red Fort -->
+    <div class="place">
+        <h2>3. Red Fort</h2>
+        <p>
+            Built in 1638 by Mughal Emperor Shah Jahan, the Red Fort is a UNESCO World Heritage Site.
+            It remains a symbol of India’s independence and rich Mughal architecture.
+        </p>
+        <div class="gallery">
+            <img src="39.jfif">
+            <img src="40.jfif">
+            <img src="41.jfif">
+            <img src="42.jfif">
+        </div>
+    </div>
+
+    <!-- Lotus Temple -->
+    <div class="place">
+        <h2>4. Lotus Temple</h2>
+        <p>
+            Opened in 1986, the Lotus Temple is renowned for its flower-like structure and
+            tranquil ambiance. It welcomes people of all faiths for meditation and reflection.
+        </p>
+        <div class="gallery">
+            <img src="43.jfif">
+            <img src="44.jfif">
+            <img src="45.jfif">
+            <img src="46.jfif">
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
